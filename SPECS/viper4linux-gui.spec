@@ -6,7 +6,7 @@
 
 Name:           viper4linux-gui
 Version:        %{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Official UI for Viper4Linux
 
 License:        GPLv3
@@ -42,6 +42,7 @@ Comment=User Interface for Viper4Linux
 Keywords=equalizer
 Categories=AudioVideo;Audio;
 Exec=viper-gui
+Icon=viper-gui
 StartupNotify=false
 Terminal=false
 Type=Application
