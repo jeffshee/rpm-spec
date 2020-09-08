@@ -7,7 +7,7 @@
 
 Name:           viper4linux
 Version:        %{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        An Adaptive Digital Sound Processor
 
 License:        GPLv3
@@ -28,16 +28,16 @@ This is the second interation of Viper4Linux and aims to focus on features and e
 
 %install
 %{__mkdir_p} %{buildroot}%{_bindir}
-%{__mkdir_p} %{buildroot}%{homedir}/.config
+%{__mkdir_p} %{buildroot}%{homedir}/.config/viper4linux
 %{__install} -m 0755 viper %{buildroot}%{_bindir}/viper
-%{__install} -D -m 0644 viper4linux/* %{buildroot}%{homedir}/.config
+%{__install} -m 0644 viper4linux/* %{buildroot}%{homedir}/.config/viper4linux
 
 %clean
 rm -rf %{buildroot}
 
 %files
 %{_bindir}/viper
-%config(noreplace) %{homedir}/.config/*
+%config(noreplace) %{homedir}/.config/viper4linux/*
 
 %changelog
 * Sun Sep  6 2020 jeffshee <jeffshee8969@gmail.com>
